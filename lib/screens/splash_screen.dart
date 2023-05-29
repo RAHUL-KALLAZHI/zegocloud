@@ -21,11 +21,11 @@ class SpalshScreen extends StatelessWidget {
           : Navigator.of(context).pushReplacement(
               MaterialPageRoute(builder: (context) => const SignupScreen()));
     });
-    return const Scaffold(
+    return Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: const [
             TextWidget(),
             SizedBox(height: 15),
             LoaderWidget(),

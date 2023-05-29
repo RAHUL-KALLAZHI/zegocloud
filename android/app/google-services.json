@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "30114327111",
+    "project_id": "zegocloudapp",
+    "storage_bucket": "zegocloudapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30114327111:android:0e60753b4a408908fc1f62",
+        "android_client_info": {
+          "package_name": "com.example.zego_cloud"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwWIYMzkEb3lnGecTpRmlUeFiBxfiVf7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

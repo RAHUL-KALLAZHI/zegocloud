@@ -39,24 +39,21 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: TextFormField(
                         keyboardType: TextInputType.number,
                       )),
-                  IconButton(
-                    onPressed: iniviteCall,
-                    icon: const Icon(Icons.call_outlined),
-                  )
+                  Expanded(
+                    child: ZegoSendCallInvitationButton(
+                      invitees: [
+                        ZegoUIKitUser(id: controller.text, name: "name")
+                      ],
+                      isVideoCall: true,
+                      resourceID: "resource_id_with_voip_datamessages",
+                    ),
+                  ),
                 ],
               ),
             ),
           ],
         ),
       ),
-    );
-  }
-
-  void iniviteCall() {
-    ZegoSendCallInvitationButton(
-      invitees: [ZegoUIKitUser(id: controller.text, name: "name")],
-      isVideoCall: true,
-      resourceID: "resource_id_with_voip_datamessages",
     );
   }
 
