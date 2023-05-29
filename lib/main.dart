@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zego_cloud/utils/global_key.dart';
 import 'package:zego_uikit_prebuilt_call/zego_uikit_prebuilt_call.dart';
+import 'package:zego_uikit_signaling_plugin/zego_uikit_signaling_plugin.dart';
 
 import 'screens/splash_screen.dart';
 import 'utils/shared_preference.dart';
@@ -10,6 +11,10 @@ Future<void> main() async {
   await SharedPrefrenceUtils.instance.initialize();
   ZegoUIKitPrebuiltCallInvitationService()
       .setNavigatorKey(GlobalKeyUtils.navigatorKey);
+  ZegoUIKit().initLog().then((value) {
+    ZegoUIKitPrebuiltCallInvitationService()
+        .useSystemCallingUI([ZegoUIKitSignalingPlugin()]);
+  });
   runApp(const MyApp());
 }
 
